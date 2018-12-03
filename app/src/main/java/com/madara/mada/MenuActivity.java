@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -30,7 +30,8 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 
 public class MenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        VerPerfilFragment.OnFragmentInteractionListener{
 
     String name, email;
     Uri photoUrl;
@@ -113,10 +114,13 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment miFragment = new Fragment();
+        boolean Seleccionado = false;
         int id = item.getItemId();
 
         if (id == R.id.nav_import) {
-            // Handle the camera action
+            miFragment = new VerPerfilFragment();
+            Seleccionado = true;
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -127,6 +131,9 @@ public class MenuActivity extends AppCompatActivity
             firebaseAuth.getInstance().signOut();
             intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+        }
+        if(Seleccionado) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, miFragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -166,6 +173,9 @@ public class MenuActivity extends AppCompatActivity
             Toast.makeText(MenuActivity.this, "No pudimos descargar tu foto de perfil", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
+    }
 
 }
