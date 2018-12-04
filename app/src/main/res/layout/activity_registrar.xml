@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/animacion"
+        android:src="@drawable/animacion" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="false"
         android:orientation="vertical">
 
         <Space
@@ -32,13 +39,19 @@
                 android:layout_weight="1"
                 android:text="Registrar usuario"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="30sp"
+                android:textStyle="italic" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
 
         <Space
             android:layout_width="match_parent"
@@ -61,7 +74,9 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Usuario"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -90,7 +105,9 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Contraseña"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColorHint="@color/common_google_signin_btn_text_dark_default" />
 
             <Space
                 android:layout_width="wrap_content"
