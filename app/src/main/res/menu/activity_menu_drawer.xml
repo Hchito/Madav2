@@ -20,6 +20,14 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Chat" />
+        <item
+            android:id="@+id/nav_pres"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Prestadores" />
+        <item
+            android:id="@+id/nav_soli"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Solicitantes" />
     </group>
 
     <item android:title="Communicate">
