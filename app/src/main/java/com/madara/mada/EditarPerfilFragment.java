@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseUser;
 
 
 /**
@@ -28,6 +32,15 @@ public class EditarPerfilFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+
+    FirebaseUser user;
+
+    String name, email;
+    Uri photoUrl;
+    String uid;
+    ImageView Foto;
+    TextView Nombre, Correo;
 
     public EditarPerfilFragment() {
         // Required empty public constructor
@@ -105,4 +118,6 @@ public class EditarPerfilFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

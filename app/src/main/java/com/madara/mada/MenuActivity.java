@@ -31,7 +31,7 @@ import java.io.File;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        VerPerfilFragment.OnFragmentInteractionListener{
+        VerPerfilFragment.OnFragmentInteractionListener,BusPrestadorFragment.OnFragmentInteractionListener,BusSolicitanteFragment.OnFragmentInteractionListener{
 
     String name, email;
     Uri photoUrl;
@@ -127,6 +127,12 @@ public class MenuActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
+        } else if (id == R.id.nav_pres) {
+            miFragment = new BusPrestadorFragment();
+            Seleccionado = true;
+        } else if (id == R.id.nav_soli) {
+            miFragment = new BusSolicitanteFragment();
+            Seleccionado = true;
         } else if (id == R.id.nav_send) {
             firebaseAuth.getInstance().signOut();
             intent = new Intent(this, MainActivity.class);
