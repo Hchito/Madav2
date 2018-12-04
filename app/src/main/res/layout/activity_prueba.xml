@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/esta"
     tools:context=".PruebaActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Space
                 android:layout_width="match_parent"
@@ -36,7 +39,8 @@
                     android:layout_weight="1"
                     android:text="Ingresa tu información"
                     android:textAlignment="center"
-                    android:textSize="18sp" />
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="30sp" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -60,11 +64,11 @@
 
                 <ImageView
                     android:id="@+id/IVRegistrarU"
-                    android:layout_width="150dp"
-                    android:layout_height="200dp"
+                    android:layout_width="70dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
                     android:onClick="subirFoto"
-                    app:srcCompat="@drawable/usuario" />
+                    app:srcCompat="@drawable/cam" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -88,7 +92,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Agregar Foto"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -98,7 +104,8 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:background="@drawable/noche" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,6 +124,7 @@
                     android:layout_weight="1"
                     android:text="Nombre"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="18sp" />
 
                 <EditText
@@ -126,7 +134,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Juan"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@android:color/holo_blue_bright" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -155,6 +165,7 @@
                     android:layout_weight="1"
                     android:text="Apellido"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="18sp" />
 
                 <EditText
@@ -164,7 +175,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Perez"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textColorHint="@android:color/holo_blue_bright" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -193,6 +206,7 @@
                     android:layout_weight="1"
                     android:text="Direccion"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="18sp" />
 
                 <EditText
@@ -202,7 +216,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Pinos 2A"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@android:color/holo_blue_bright" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -230,6 +246,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Telefono"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="18sp" />
 
                 <EditText
@@ -239,7 +256,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="3461030176"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@android:color/holo_blue_bright" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -260,13 +279,15 @@
                 <Space
                     android:layout_width="102dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@color/common_google_signin_btn_text_light_default" />
 
                 <Spinner
                     android:id="@+id/Tipos_spinner"
                     android:layout_width="215dp"
                     android:layout_height="47dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -294,6 +315,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Ocupación"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="18sp" />
 
                 <EditText
@@ -302,7 +324,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:hint="Albañil"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@android:color/holo_blue_bright" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -313,38 +338,6 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Fecha de nacimiento"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/editText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="date" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
@@ -365,8 +358,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/colorPrimary"
                     android:onClick="InsertarInformacion"
-                    android:text="Enviar información" />
+                    android:text="Enviar información"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
 
                 <Space
                     android:layout_width="wrap_content"
