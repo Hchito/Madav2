@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -31,7 +32,8 @@ import java.io.File;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-        VerPerfilFragment.OnFragmentInteractionListener,BusPrestadorFragment.OnFragmentInteractionListener,BusSolicitanteFragment.OnFragmentInteractionListener{
+        VerPerfilFragment.OnFragmentInteractionListener,BusPrestadorFragment.OnFragmentInteractionListener,BusSolicitanteFragment.OnFragmentInteractionListener,
+        ChatFragment.OnFragmentInteractionListener, TrabajosFragment.OnFragmentInteractionListener,EditarPerfilFragment.OnFragmentInteractionListener{
 
     String name, email;
     Uri photoUrl;
@@ -44,6 +46,7 @@ public class MenuActivity extends AppCompatActivity
     FirebaseStorage storage;
     StorageReference storageRef;
     StorageReference mountainsRef;
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,14 +122,24 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_import) {
-            miFragment = new VerPerfilFragment();
-            Seleccionado = true;
+            VerPerfilFragment perfilUsuariosFragment = new VerPerfilFragment();
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            Bundle args = new Bundle();
+            args.putString("UI", uid);
+            perfilUsuariosFragment.setArguments(args);
+            fragmentTransaction.replace(R.id.fragment, perfilUsuariosFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+            Seleccionado = false;
         } else if (id == R.id.nav_gallery) {
-
+            miFragment = new EditarPerfilFragment();
+            Seleccionado = true;
         } else if (id == R.id.nav_slideshow) {
-
+            miFragment = new TrabajosFragment();
+            Seleccionado = true;
         } else if (id == R.id.nav_manage) {
-
+            miFragment = new ChatFragment();
+            Seleccionado = true;
         } else if (id == R.id.nav_pres) {
             miFragment = new BusPrestadorFragment();
             Seleccionado = true;
