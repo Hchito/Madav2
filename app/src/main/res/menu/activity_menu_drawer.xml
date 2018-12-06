@@ -6,27 +6,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_import"
-            android:icon="@drawable/ic_menu_camera"
+            android:checked="true"
+            android:icon="@drawable/user"
             android:title="Ver perfil" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/editarperfil"
             android:title="Editar perfil" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/trabajos"
             android:title="Trabajos" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/chat"
             android:title="Chat" />
         <item
             android:id="@+id/nav_pres"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/prestador"
             android:title="Prestadores" />
         <item
             android:id="@+id/nav_soli"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/solicitante"
             android:title="Solicitantes" />
     </group>
 
@@ -34,9 +35,8 @@
         <menu>
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/salir"
                 android:title="Salir" />
         </menu>
     </item>
-
 </menu>
