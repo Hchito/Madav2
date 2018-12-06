@@ -136,8 +136,8 @@ public class BusPrestadorFragment extends Fragment {
                             RecyclerPrestador.setAdapter(adapterDatos);
                             progressDialog.dismiss();
 
-                            //InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
-                            //inputMethodManager.hideSoftInputFromWindow(getActivity().getWindow().getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                            InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
+                            inputMethodManager.hideSoftInputFromWindow(getActivity().getWindow().getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError){
