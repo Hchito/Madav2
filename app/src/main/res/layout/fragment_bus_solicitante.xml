@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bosque"
     tools:context=".BusSolicitanteFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bosque">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,6 +31,36 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
+                <TextView
+                    android:id="@+id/Solicitantes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Solicitantes"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="28sp"
+                    android:textStyle="italic" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
                 <EditText
                     android:id="@+id/ETBuscar"
                     android:layout_width="279dp"
@@ -36,7 +68,10 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Buscar..."
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -57,12 +92,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-            <Button
-                android:id="@+id/BtnMasAlumnos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mostrar mas"
-                android:visibility="invisible" />
 
         </LinearLayout>
     </ScrollView>
